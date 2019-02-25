@@ -19,3 +19,11 @@ variable "privacy" {
 
   description = "The level of privacy this team should have."
 }
+
+variable "maintainers" {
+  type = "list"
+
+  default = []
+
+  description = "The logins of organization members to add as maintainers of the team."
+}
