@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/innovationnorway/terraform-github-team/compare/v1.0.0...v1.1.0) (2019-02-25)
+
+
+### Features
+
+* add `maintainers` argument ([c6228fd](https://github.com/innovationnorway/terraform-github-team/commit/c6228fd))
+
 # 1.0.0 (2019-02-25)
 
 
