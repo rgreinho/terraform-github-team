@@ -15,3 +15,13 @@ resource "github_team_membership" "maintainers" {
 
   role = "maintainer"
 }
+
+resource "github_team_membership" "members" {
+  count = "${length(var.members)}"
+
+  team_id = "${github_team.main.id}"
+
+  username = "${element(var.members, count.index)}"
+
+  role = "member"
+}
