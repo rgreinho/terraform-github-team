@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/innovationnorway/terraform-github-team/compare/v1.1.0...v1.2.0) (2019-02-25)
+
+
+### Features
+
+* add `members` argument ([97c2b7a](https://github.com/innovationnorway/terraform-github-team/commit/97c2b7a))
+
 # [1.1.0](https://github.com/innovationnorway/terraform-github-team/compare/v1.0.0...v1.1.0) (2019-02-25)
 
 
