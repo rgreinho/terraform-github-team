@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/innovationnorway/terraform-github-team/compare/v1.2.0...v1.3.0) (2019-02-25)
+
+
+### Features
+
+* add `parent_team` argument ([e13d895](https://github.com/innovationnorway/terraform-github-team/commit/e13d895))
+
 # [1.2.0](https://github.com/innovationnorway/terraform-github-team/compare/v1.1.0...v1.2.0) (2019-02-25)
 
 
