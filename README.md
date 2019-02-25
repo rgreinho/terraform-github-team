@@ -27,3 +27,6 @@ module "terraform_team" {
 | `privacy`     | `string` | The level of privacy this team should have. The options are: <br> * `secret` - only visible to organization owners and members of this team. <br> * `closed` - visible to all members of this organization. <br> Default: `closed`. |
 | `maintainers` | `list`   | The `login`s of organization members to add as maintainers of the team.                                                                                                                                                             |
 | `members`     | `list`   | The `login`s of organization members to add as normal members of the team.                                                                                                                                                          |
+## Limitations
+
+Due to current limitations of the Terraform language, items added or removed from the `maintainers` and `members` lists, will also update subsequent items with indexes greater than where the addition or removal was made. 
