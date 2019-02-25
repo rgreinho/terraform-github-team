@@ -11,6 +11,8 @@ module "terraform_team" {
   name = "terraform"
 
   description = "Reviewing Terraform configurations"
+
+  maintainers = ["steinpetersen-in"]
 }
 ```
 
@@ -21,3 +23,4 @@ module "terraform_team" {
 | `name`        | `string` | **Required**. The name of the team.                                                                                                                                                                                                 |
 | `description` | `string` | The description of the team.                                                                                                                                                                                                        |
 | `privacy`     | `string` | The level of privacy this team should have. The options are: <br> * `secret` - only visible to organization owners and members of this team. <br> * `closed` - visible to all members of this organization. <br> Default: `closed`. |
+| `maintainers` | `list`   | The `login`s of organization members to add as maintainers of the team.                                                                                                                                                             |
