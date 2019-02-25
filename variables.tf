@@ -27,3 +27,11 @@ variable "maintainers" {
 
   description = "The logins of organization members to add as maintainers of the team."
 }
+
+variable "members" {
+  type = "list"
+
+  default = []
+
+  description = "The logins of organization members to add as normal members of the team."
+}
