@@ -20,6 +20,14 @@ variable "privacy" {
   description = "The level of privacy this team should have."
 }
 
+variable "parent_team" {
+  type = "string"
+
+  default = ""
+
+  description = "The name of a team to set as the parent team."
+}
+
 variable "maintainers" {
   type = "list"
 

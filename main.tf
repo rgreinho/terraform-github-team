@@ -1,9 +1,17 @@
+data "github_team" "parent" {
+  count = "${var.parent_team != "" ? 1 : 0}"
+
+  slug = "${var.parent_team}"
+}
+
 resource "github_team" "main" {
   name = "${var.name}"
 
   description = "${var.description}"
 
   privacy = "${var.privacy}"
+
+  parent_team_id = "${element(concat(data.github_team.parent.*.id, list("0")), 0)}"
 }
 
 resource "github_team_membership" "maintainers" {
