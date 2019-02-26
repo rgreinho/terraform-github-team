@@ -7,7 +7,7 @@ variable "name" {
 variable "description" {
   type = string
 
-  default = ""
+  default = null
 
   description = "The description of the team."
 }

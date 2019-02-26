@@ -11,7 +11,7 @@ resource "github_team" "main" {
 
   privacy = var.privacy
 
-  parent_team_id = element(concat(data.github_team.parent.*.id, ["0"]), 0)
+  parent_team_id = var.parent_team != "" ? data.github_team.parent[0].id : null
 }
 
 resource "github_team_membership" "maintainers" {
@@ -19,7 +19,7 @@ resource "github_team_membership" "maintainers" {
 
   team_id = github_team.main.id
 
-  username = element(var.maintainers, count.index)
+  username = var.maintainers[count.index]
 
   role = "maintainer"
 }
@@ -29,7 +29,7 @@ resource "github_team_membership" "members" {
 
   team_id = github_team.main.id
 
-  username = element(var.members, count.index)
+  username = var.members[count.index]
 
   role = "member"
 }
