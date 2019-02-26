@@ -1,19 +1,19 @@
 variable "name" {
-  type = "string"
+  type = string
 
   description = "The name of the team."
 }
 
 variable "description" {
-  type = "string"
+  type = string
 
-  default = ""
+  default = null
 
   description = "The description of the team."
 }
 
 variable "privacy" {
-  type = "string"
+  type = string
 
   default = "closed"
 
@@ -21,7 +21,7 @@ variable "privacy" {
 }
 
 variable "parent_team" {
-  type = "string"
+  type = string
 
   default = ""
 
@@ -29,7 +29,7 @@ variable "parent_team" {
 }
 
 variable "maintainers" {
-  type = "list"
+  type = list(string)
 
   default = []
 
@@ -37,9 +37,10 @@ variable "maintainers" {
 }
 
 variable "members" {
-  type = "list"
+  type = list(string)
 
   default = []
 
   description = "The logins of organization members to add as normal members of the team."
 }
+
