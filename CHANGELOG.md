@@ -1,3 +1,9 @@
+# 1.4.0
+
+### Features
+
+* Add `id` and `slug` output variables.
+
 # [1.3.0](https://github.com/innovationnorway/terraform-github-team/compare/v1.2.0...v1.3.0) (2019-02-25)
 
 

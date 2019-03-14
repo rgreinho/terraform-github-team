@@ -28,6 +28,14 @@ module "terraform_team" {
 | `parent_team` | `string` | The `slug` of a team to set as the parent team.                                                                                                                                                                                     |
 | `maintainers` | `list`   | The `login`s of organization members to add as maintainers of the team.                                                                                                                                                             |
 | `members`     | `list`   | The `login`s of organization members to add as normal members of the team.                                                                                                                                                          |
+## Module outputs
+
+Available outputs are listed below, along with their description
+| output | description |
+|---|---|
+|`id`| The ID of the created team. |
+|`slug`|  The slug of the created team, which may or may not differ from name, depending on whether name contains "URL-unsafe" characters. |
+
 ## Limitations
 
-Due to current limitations of the Terraform language, items added or removed from the `maintainers` and `members` lists, will also update subsequent items with indexes greater than where the addition or removal was made. 
+Due to current limitations of the Terraform language, items added or removed from the `maintainers` and `members` lists, will also update subsequent items with indexes greater than where the addition or removal was made.
